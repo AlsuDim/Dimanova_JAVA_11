@@ -1,0 +1,77 @@
+1. Программа сравнения и арифметических операций с двумя целыми числами:
+
+import java.util.Scanner;
+
+public class NumberOperations {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Введите число a: ");
+        int a = scanner.nextInt();
+        
+        System.out.print("Введите число b: ");
+        int b = scanner.nextInt();
+        
+        // Сравнение чисел
+        if (a > b) {
+            System.out.println("a > b");
+        } else if (a < b) {
+            System.out.println("a < b");
+        } else {
+            System.out.println("a = b");
+        }
+        
+        // Арифметические операции
+        System.out.println("Сложение: " + (a + b));
+        System.out.println("Вычитание: " + (a - b));
+        System.out.println("Умножение: " + (a * b));
+        
+        if (b != 0) {
+            System.out.println("Деление: " + ((double) a / b));
+        } else {
+            System.out.println("Деление на ноль невозможно");
+        }
+        
+        scanner.close();
+    }
+}
+
+
+2. Программа сравнения двух строк:
+
+import java.util.Scanner;
+
+public class StringCompare {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Введите строку a: ");
+        String a = scanner.nextLine();
+        
+        System.out.print("Введите строку b: ");
+        String b = scanner.nextLine();
+        
+        if (a.equals(b)) {
+            System.out.println("Строки идентичны");
+        } else {
+            System.out.println("Строки неидентичны");
+        }
+        
+        scanner.close();
+    }
+}
+
+3. Программа вывода всех четных чисел из заданного массива:
+
+public class EvenNumbers {
+    public static void main(String[] args) {
+        int[] numbers = {1,2,3,4,5,6,7,8,9,10};
+        
+        System.out.println("Чётные числа массива:");
+        for (int num : numbers) {
+            if (num % 2 == 0) {
+                System.out.println(num);
+            }
+        }
+    }
+}
